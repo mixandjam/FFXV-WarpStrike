@@ -31,7 +31,7 @@ public class WarpController : MonoBehaviour
     public Transform swordHand;
     private Vector3 swordOrigRot;
     private Vector3 swordOrigPos;
-    private MeshRenderer swordMesh;
+    private Renderer swordMesh;
 
     [Space]
     public Material glowMaterial;
@@ -67,7 +67,7 @@ public class WarpController : MonoBehaviour
         postProfile = postVolume.profile;
         swordOrigRot = sword.localEulerAngles;
         swordOrigPos = sword.localPosition;
-        swordMesh = sword.GetComponentInChildren<MeshRenderer>();
+        swordMesh = sword.GetComponentInChildren<Renderer>();
         swordMesh.enabled = false;
     }
 
@@ -105,6 +105,7 @@ public class WarpController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             input.RotateTowards(target);
+            input.Speed = 0;
             input.canMove = false;
             swordParticle.Play();
             swordMesh.enabled = true;
@@ -151,8 +152,11 @@ public class WarpController : MonoBehaviour
         SkinnedMeshRenderer[] skinMeshList = clone.GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach (SkinnedMeshRenderer smr in skinMeshList)
         {
-            smr.material = glowMaterial;
-            smr.material.DOFloat(2, "_AlphaThreshold", 5f).OnComplete(()=>Destroy(clone));
+            Material[] m = new Material[1];
+            m[0] = glowMaterial;
+
+            smr.materials = m;
+            smr.material.DOFloat(2, "_AlphaThreshold", 5f).OnComplete(() => Destroy(clone));
         }
 
         ShowBody(false);
@@ -191,7 +195,7 @@ public class WarpController : MonoBehaviour
         Instantiate(hitParticle, sword.position, Quaternion.identity);
 
         target.GetComponentInParent<Animator>().SetTrigger("hit");
-        target.parent.DOMove(target.position + transform.forward, .5f);
+        target.parent.DOMove(target.position + transform.forward * 2, .5f);
 
         StartCoroutine(HideSword());
         StartCoroutine(PlayAnimation());
@@ -231,7 +235,7 @@ public class WarpController : MonoBehaviour
 
         swordMesh.enabled = false;
 
-        MeshRenderer swordMR = swordClone.GetComponentInChildren<MeshRenderer>();
+        Renderer swordMR = swordClone.GetComponentInChildren<Renderer>();
         Material[] materials = swordMR.materials;
 
         for (int i = 0; i < materials.Length; i++)
@@ -256,7 +260,10 @@ public class WarpController : MonoBehaviour
         SkinnedMeshRenderer[] skinMeshList = GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach (SkinnedMeshRenderer smr in skinMeshList)
         {
-            smr.enabled = state;
+            if (!smr.CompareTag("Weapon"))
+            {
+                smr.enabled = state;
+            }
         }
     }
 

@@ -1,0 +1,12 @@
+Model come from Mario Tennis: Ultra Smash (Wii U)
+
+.DAE file exported from 3ds Max 2012 with OpenCOLLADA Plug-in, and support rigged.
+
+.FBX is 2012 version
+
+.SMD also support rigged, use .SMD plugin for your 3D Program. You can find them on Google. Model has separate off due to Body Groups. However, import multi .SMD doesn't lose any rigged.
+
+Credit to RandomTakingBush and his great people for the extractor tool.
+
+No need to credit, just use it whatever you want.
+

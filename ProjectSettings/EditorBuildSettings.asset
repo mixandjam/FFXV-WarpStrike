@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 3aba5ea1bc470db4eb4963f371e101fb
+  - enabled: 1
+    path: Assets/DLC/WAAHrp Strike.unity
+    guid: 83436acfac56a184b8e712cc109edb4d
   m_configObjects: {}

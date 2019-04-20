@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Target
+  - Weapon
+  - Destroy
   layers:
   - Default
   - TransparentFX
