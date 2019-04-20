@@ -5351,8 +5351,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b1a9bbc7aba0ee42864215b8faec8ab, type: 2}
-  - {fileID: 2100000, guid: 6b1a9bbc7aba0ee42864215b8faec8ab, type: 2}
+  - {fileID: 2100000, guid: cf404d6474c2a994cb4d90edd6af3444, type: 2}
+  - {fileID: 2100000, guid: cf404d6474c2a994cb4d90edd6af3444, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11007,8 +11007,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b1a9bbc7aba0ee42864215b8faec8ab, type: 2}
-  - {fileID: 2100000, guid: 6b1a9bbc7aba0ee42864215b8faec8ab, type: 2}
+  - {fileID: 2100000, guid: cf404d6474c2a994cb4d90edd6af3444, type: 2}
+  - {fileID: 2100000, guid: cf404d6474c2a994cb4d90edd6af3444, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18503,7 +18503,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b1a9bbc7aba0ee42864215b8faec8ab, type: 2}
+  - {fileID: 2100000, guid: cf404d6474c2a994cb4d90edd6af3444, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -24371,11 +24371,11 @@ MonoBehaviour:
   warpDuration: 0.25
   sword: {fileID: 890523575}
   swordHand: {fileID: 1660635161}
-  glowMaterial: {fileID: 2100000, guid: 5657ba7c13269bd40a6d7b7432cd3474, type: 2}
+  glowMaterial: {fileID: 2100000, guid: 90760934fd54a154cb272273f3ba6f1c, type: 2}
   blueTrail: {fileID: 956267214}
   whiteTrail: {fileID: 272151774}
   swordParticle: {fileID: 1177906862}
-  hitParticle: {fileID: 5183735168474479416, guid: 00e89778035a9b745bd236faac9cdaca,
+  hitParticle: {fileID: 5183735168474479416, guid: 4637f286cb82bf645bcb025b0d553639,
     type: 3}
   aim: {fileID: 936045100}
   lockAim: {fileID: 1155595096}
